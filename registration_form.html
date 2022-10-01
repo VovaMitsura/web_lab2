@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<style type="text/css">
+		.form-header{
+			text-align: center;
+			background-color: #eff0f1;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;  
+		}
+
+		body{
+			margin: 0 auto;
+			color: #1bba93;
+		}
+
+		.form-body{
+			padding-left: 10px;
+			margin-left: 10px; 
+			margin-right: 50px;
+		}
+
+		.form-group{
+			margin-bottom: 40px;
+			margin-top: 10px;  
+			margin-left: 20px; 
+		}
+
+		.form-body .label-title{
+			color: #1bba93;
+		}
+
+		.form-body .form-input{
+			width: 100%;
+			height: 34px;
+			padding left: 15px;
+			padding-right: 15px; 
+			margin-bottom: 20px;
+			color: #333333;
+			text-align: left;
+		}
+
+		.form-body .form-checkbox{
+			width: 3%;
+			height: 15px;
+			color: #333333;
+			text-align: left;
+		}
+
+		.horizontal-group .left{
+			float: left;
+			width: 45%;
+		}
+
+		.horizontal-group .right{
+			float: right;
+			width: 45%;
+		}
+
+		img{
+			display: block;
+			margin: 0 auto; 
+			width: 200px;
+			height: 200px;
+			}
+
+		.resetbtn{
+			background-color: #1bba93;
+			color: white;
+		}
+
+		.confirmbtm{
+			background-color: red;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<form clss="registration-form" method="post">
+		
+		<div class="form-header">
+			<h1>Registration form</h1>
+		</div>
+		
+		<div class="form-body">
+
+			<div class="horizontal-group">
+				
+				<div class="form-group left">
+					<img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg">
+					
+					<label for="firstname" class="label-title">First Name</label>
+					<input type="text" id="firstname" class="form-input"
+					placeholder="Name" required="required"/>
+					
+					<label for="lastname" class="label-title">Last name</label>
+					<input type="text" id="lastname" class="form-input"placeholder="Surname" required="required"/>
+
+					<div class="input-group">
+						<span class="label-title">Select Gender:
+						<label for="male"><input type="radio" name="gender" value="male" id="male">Male</label>
+						<label for="female"><input type="radio" name="gender" value="female" id="female">Male</label>
+						</span>
+					</div>
+					<br>
+					<label for="year-old" class="label-title">Year`s old</label><input type="number" id="year-old"class="form-input", min="16" max="120" required="required"/>
+
+					<label for="date-of-birth" class="label-title">Date of birth</label><input type="date" id="date-of-birth"class="form-input" required="required"/>
+				</div>
+				
+				<div class="form-group right">
+					<label for="country" class="label-title">Choose Country</label>
+					<select class="form-input" id="country">
+						<option value="U">Ukraine</option>
+						<option value="P">Poland</option>
+						<option value="B">Britan</option>
+					</select>
+					
+					<label for="phone-number" class="label-title">Phone Number</label>
+					<input type="tel" id="phone-number" class="form-input"
+					placeholder="Phone" required="required"/>
+					
+					<label for="social" class="label-title">Social</label>
+					<input type="text" id="social" class="form-input" placeholder="Social" required="required"/>
+
+					<label for="mail" class="label-title">Mail</label>
+					<input type="mail" id="mail" class="form-input" placeholder="Mail" required="required"/>
+
+					<label for="password" class="label-title">Password</label><input type="password" id="password" class="form-input" placeholder="password" required="required"/>
+
+					<label for="agree" class="label-title">Agree with the rules: </label><input type="checkbox" id="agree" class="form-checkbox"/>
+
+					<div class="input-group">
+						<p><button type="reset" class="resetbtn"/>Reset</button>
+						<button type="submit" class="confirmbtm"/>Submit</button></p>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div class="form-footer"></div>
+	</form>
+</body>
+</html>
