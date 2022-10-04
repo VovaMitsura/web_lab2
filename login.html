@@ -3,6 +3,13 @@
 <head>
 	<title>Login form</title>
 	<style type="text/css">
+		body{
+			padding-left: 10px;
+			margin-left: 10px; 
+			margin-right: 50px;
+			color: #1bba93;
+		}
+
 		.form-header{
 			text-align: center;
 			background-color: #eff0f1;
@@ -10,17 +17,14 @@
 			border-top-right-radius: 10px;  
 		}
 
-		body{
-			margin: 0 auto;
-			color: #1bba93;
+		.login {
+			border: 3px solid #f1f1f1;
 		}
-
-		form {border: 3px solid #f1f1f1;}
 
 		input[type=text], input[type=password] {
 		  width: 100%;
 		  padding: 12px 20px;
-		  margin: 8px 0;
+		  margin: 8px 0	;
 		  border: 1px solid #ccc;
 		  box-sizing: border-box;
 		}
@@ -31,16 +35,14 @@
 
 		button {
 		  background-color: #1bba93;
+		  border:inherit;
 		  color: white;
 		  padding: 14px 20px;
 		  margin: 8px 0;
-		  border: none;
 		  width: 100%;
 		}
 
 		.cancelbtn {
-		  width: 100%;
-		  padding: 10px 18px;
 		  background-color: #f44336;
 		}
 
@@ -51,32 +53,73 @@
 
 		.avatar {
 		  width: 20%;
+		}
+
+		.horizontal-group .left{
+			float: left;
+			width: 45%;
+		}
+
+		.horizontal-group .right{
+			float: right;
+			width: 45%;
+		}
+
+
+		.right .right-left {
+			float: left;
+			width: 45%;
+		} 
+
+		.right .right-right {
+			float: right;
+			width: 45%;
+		} 
+
+		.right .right-right img {
+		    width: 60px; 
+     		height: 60px;
+       		border-radius: 50%;
+       		margin-bottom: 20px; 
 		}		
 	</style>
 </head>
 <body>
-	<div class="form">
-		<div class="form-header">
-			<h1>Login form</h1>
+	<header class="form-header">
+		<h1>Login form</h1>
+	</header>
+
+	<form class="login">
+		<div class="imgcontainer">
+			<img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" class="avatar">
 		</div>
-		<form class="login">
-			<div class="imgcontainer">
-				<img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" class="avatar">
-			</div>
-			<div class="form-body">
-				<label for="username" class="login-form"><b>Username</b><input type="text" class="login" placeholder="username" required="required"/>
-				</label>
+		<div class="form-body">
+			<label for="username" class="login-form"><strong>Username</strong></label>
+			<input type="text" class="login" placeholder="Username" required="required"/>
 
-				<label for="password" class="login-form"><b>Password</b>
-					<input type="password" class="password" placeholder="password" required="required"/>
-				</label>
+			<label for="Password" class="login-form"><strong>Password</strong></label>
+			<input type="password" class="Password" placeholder="Password" required="required"/>
 
-				<button type="submit">Login</button>
+
+			<button type="submit">Login</button>
+			<button type="button" class="cancelbtn">Cancel</button>
+		</div>
+	</form>
+	<br>
+	<footer>
+		<div class="horizontal-group">
+			<div class="left">
 			</div>
-			<div class="form footer">
-				<button type="button" class="cancelbtn">Cancel</button>
+			<div class="right">
+				<div class="right-left"><h1>Contact us</h1>
+				</div>
+				<div class="right-right"> 
+					<a href="https://www.instagram.com/"><img src="https://cdn.icon-icons.com/		icons2/1211/PNG/512/1491579602-yumminkysocialmedia36_83067.png"></a>
+        			<a href="https://www.youtube.com/"><img src="https://i.pinimg.com/originals/77/ed/ea/77edea2fbbb0f15de7cad9df138359d2.jpg"></a>
+       				<a href="https://twitter.com/?lang=uk"><img src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg"></a>
+     			</div>
 			</div>
-		</form>
-	</div>
+		</div>
+	</footer>
 </body>
 </html>
