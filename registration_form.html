@@ -3,6 +3,13 @@
 <head>
 	<title>Registration Form</title>
 	<style type="text/css">
+		body{
+			padding-left: 10px;
+			margin-left: 10px; 
+			margin-right: 50px;
+			color: #1bba93;
+		}
+
 		.form-header{
 			text-align: center;
 			background-color: #eff0f1;
@@ -10,22 +17,19 @@
 			border-top-right-radius: 10px;  
 		}
 
-		body{
-			margin: 0 auto;
-			color: #1bba93;
-		}
-
-		.form-body{
+		/*.form-body{
 			padding-left: 10px;
 			margin-left: 10px; 
 			margin-right: 50px;
-		}
+		}*/
 
+		/*
 		.form-group{
 			margin-bottom: 40px;
 			margin-top: 10px;  
 			margin-left: 20px; 
 		}
+		*/
 
 		.form-body .label-title{
 			color: #1bba93;
@@ -33,9 +37,7 @@
 
 		.form-body .form-input{
 			width: 100%;
-			height: 34px;
-			padding left: 15px;
-			padding-right: 15px; 
+			height: 34px; 
 			margin-bottom: 20px;
 			color: #333333;
 			text-align: left;
@@ -58,7 +60,7 @@
 			width: 45%;
 		}
 
-		img{
+		.left img{
 			display: block;
 			margin: 0 auto; 
 			width: 200px;
@@ -74,42 +76,55 @@
 			background-color: red;
 			color: white;
 		}
+
+		.right .right-left {
+			float: left;
+			width: 45%;
+		} 
+
+		.right .right-right {
+			float: right;
+			width: 45%;
+		} 
+
+		.right img {
+		    width: 60px; 
+     		height: 60px;
+       		border-radius: 50%;
+		}
 	</style>
 </head>
 <body>
-		<form clss="registration-form" method="post">
-		
+	<form class="registration-form">	
 		<div class="form-header">
 			<h1>Registration form</h1>
 		</div>
-		
 		<div class="form-body">
-
 			<div class="horizontal-group">
 				
-				<div class="form-group left">
+				<div class="left">	
 					<img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg">
-					
+				
 					<label for="firstname" class="label-title">First Name</label>
-					<input type="text" id="firstname" class="form-input"
-					placeholder="Name" required="required"/>
+					<input type="text" id="firstname" class="form-input" placeholder="Name" required="required"/>
 					
 					<label for="lastname" class="label-title">Last name</label>
 					<input type="text" id="lastname" class="form-input"placeholder="Surname" required="required"/>
 
-					<div class="input-group">
-						<span class="label-title">Select Gender:
+					<div>
+						<span class="label-title">Select Gender:</span>
 						<label for="male"><input type="radio" name="gender" value="male" id="male">Male</label>
 						<label for="female"><input type="radio" name="gender" value="female" id="female">Male</label>
-						</span>
 					</div>
 					<br>
-					<label for="year-old" class="label-title">Year`s old</label><input type="number" id="year-old"class="form-input", min="16" max="120" required="required"/>
+					<label for="year-old" class="label-title">Year`s old</label>
+					<input type="number" id="year-old"class="form-input", min="16" max="120" required="required"/>
 
-					<label for="date-of-birth" class="label-title">Date of birth</label><input type="date" id="date-of-birth"class="form-input" required="required"/>
+					<label for="date-of-birth" class="label-title">Date of birth</label>
+					<input type="date" id="date-of-birth"class="form-input" required="required"/>
 				</div>
 				
-				<div class="form-group right">
+				<div class="right">
 					<label for="country" class="label-title">Choose Country</label>
 					<select class="form-input" id="country">
 						<option value="U">Ukraine</option>
@@ -118,8 +133,7 @@
 					</select>
 					
 					<label for="phone-number" class="label-title">Phone Number</label>
-					<input type="tel" id="phone-number" class="form-input"
-					placeholder="Phone" required="required"/>
+					<input type="tel" id="phone-number" class="form-input" placeholder="Phone" required="required"/>
 					
 					<label for="social" class="label-title">Social</label>
 					<input type="text" id="social" class="form-input" placeholder="Social" required="required"/>
@@ -127,9 +141,10 @@
 					<label for="mail" class="label-title">Mail</label>
 					<input type="mail" id="mail" class="form-input" placeholder="Mail" required="required"/>
 
-					<label for="password" class="label-title">Password</label><input type="password" id="password" class="form-input" placeholder="password" required="required"/>
+					<label for="password" class="label-title">Password</label><input type="password" id="password" class="form-input" placeholder="Password" required="required"/>
 
-					<label for="agree" class="label-title">Agree with the rules: </label><input type="checkbox" id="agree" class="form-checkbox"/>
+					<label for="agree" class="label-title">Agree with the rules:</label>
+					<input type="checkbox" id="agree" class="form-checkbox"/>
 
 					<div class="input-group">
 						<p><button type="reset" class="resetbtn"/>Reset</button>
@@ -138,7 +153,21 @@
 				</div>
 			</div>		
 		</div>
-		<div class="form-footer"></div>
 	</form>
+	<footer>
+		<div class="horizontal-group">
+			<div class="left"></div>
+			<div class="right">
+				<div class="right-left">
+					<h1>Contact us</h1>
+				</div>
+				<div class="right-right"> 
+					<a href="https://www.instagram.com/"><img src="https://cdn.icon-icons.com/icons2/1211/PNG/512/1491579602-yumminkysocialmedia36_83067.png"></a>
+        			<a href="https://www.youtube.com/"><img src="https://i.pinimg.com/originals/77/ed/ea/77edea2fbbb0f15de7cad9df138359d2.jpg"></a>
+       				<a href="https://twitter.com/?lang=uk"><img src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg"></a>
+     			</div>
+			</div>
+		</div>	
+	</footer>
 </body>
 </html>
