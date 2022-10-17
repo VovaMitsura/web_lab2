@@ -17,11 +17,12 @@
 			border-top-right-radius: 10px;  
 		}
 
-		.label-title{
-			color: #1bba93;
+		.horizontal-group .left{
+			float: left;
+			width: 45%;
 		}
 
-		.form-input{
+		.horizontal-group .left .form-input{
 			width: 100%;
 			height: 34px; 
 			margin-bottom: 20px;
@@ -29,9 +30,13 @@
 			text-align: left;
 		}
 
-		.horizontal-group .left{
-			float: left;
-			width: 45%;
+		.horizontal-group button{
+			width: 100%;	
+			background-color: #1bba93;
+			color: white;
+			border-width: 1px;
+			margin-top: 10px; 
+			height: 25px;
 		}
 
 		.horizontal-group .right{
@@ -45,6 +50,10 @@
 			min-height:240px;
 			height:100%;
 			width:100%;
+		}
+
+		.right-horizontal{
+			margin-top: 15px;
 		}
 
 		.right-horizontal .right-left {
@@ -68,39 +77,41 @@
 	<div class="form-header">
 		<h1>Contact form</h1>
 	</div>
-		
-	<div class="horizontal-group">
-		<div class="left">
-			<label for="uname" class="label-title">First name</label>
-			<input type="text" id="uname" placeholder="Name"required="required" class="form-input"/>
-				
-			<label for="email" class="label-title">Email</label>
-			<input type="email" id="email" placeholder="Email" required="required" class="form-input"/>
+	
+	<form>	
+		<div class="horizontal-group">
+			<div class="left">
+				<label for="uname" class="label-title">First name</label>
+				<input type="text" id="uname" placeholder="Name"required="required" class="form-input"/>
+					
+				<label for="email" class="label-title">Email</label>
+				<input type="email" id="email" placeholder="Email" required="required" class="form-input"/>
 
-			<label for="theme" class="label-title">Theme</label>
-			<select class="form-input" id="theme">
-				<option>Bussines</option>
-				<option>Service</option>
-				<option>Qiality</option>
-				<option>Others</option>
-			</select>
+				<label for="theme" class="label-title">Theme</label>
+				<select class="form-input" id="theme">
+					<option>Bussines</option>
+					<option>Service</option>
+					<option>Qiality</option>
+					<option>Others</option>
+				</select>
 
-			<button type="submit" class="form-input">Submit</button>
-		</div>
-		<div class="right">
-			<label for="letter" class="label-title">Letter</label>
-			<textarea id="letter" class="form-input"></textarea>
-			<div class="right-horizontal">
-				<div class="right-left">
-					<h1>Contact us</h1>
+				<button type="submit">Submit</button>
+			</div>
+			<div class="right">
+				<label for="letter" class="label-title">Letter</label>
+				<textarea id="letter" class="form-input"></textarea>
+				<div class="right-horizontal">
+					<div class="right-left">
+						<h1>Contact us</h1>
+					</div>
+					<div class="right-right">
+						<a href="https://www.instagram.com/"><img src="https://cdn.icon-icons.com/			icons2/1211/PNG/512/1491579602-yumminkysocialmedia36_83067.png"></a>
+	        			<a href="https://www.youtube.com/"><img src="https://i.pinimg.com/originals/77/ed/ea/77edea2fbbb0f15de7cad9df138359d2.jpg"></a>
+	       				<a href="https://twitter.com/?lang=uk"><img src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg"></a>
+	     			</div>
 				</div>
-				<div class="right-right">
-					<a href="https://www.instagram.com/"><img src="https://cdn.icon-icons.com/			icons2/1211/PNG/512/1491579602-yumminkysocialmedia36_83067.png"></a>
-        			<a href="https://www.youtube.com/"><img src="https://i.pinimg.com/originals/77/ed/ea/77edea2fbbb0f15de7cad9df138359d2.jpg"></a>
-       				<a href="https://twitter.com/?lang=uk"><img src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg"></a>
-     			</div>
 			</div>
 		</div>
-	</div>
+	</form>
 </body>
 </html>

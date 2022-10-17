@@ -7,7 +7,7 @@
 			padding-left: 10px;
 			margin-left: 10px; 
 			margin-right: 50px;
-			color: #1bba93;
+			color: #1bba93;	
 		}
 
 		.form-header{
@@ -17,47 +17,9 @@
 			border-top-right-radius: 10px;  
 		}
 
-		/*.form-body{
-			padding-left: 10px;
-			margin-left: 10px; 
-			margin-right: 50px;
-		}*/
-
-		/*
-		.form-group{
-			margin-bottom: 40px;
-			margin-top: 10px;  
-			margin-left: 20px; 
-		}
-		*/
 
 		.form-body .label-title{
 			color: #1bba93;
-		}
-
-		.form-body .form-input{
-			width: 100%;
-			height: 34px; 
-			margin-bottom: 20px;
-			color: #333333;
-			text-align: left;
-		}
-
-		.form-body .form-checkbox{
-			width: 3%;
-			height: 15px;
-			color: #333333;
-			text-align: left;
-		}
-
-		.horizontal-group .left{
-			float: left;
-			width: 45%;
-		}
-
-		.horizontal-group .right{
-			float: right;
-			width: 45%;
 		}
 
 		.left img{
@@ -65,16 +27,66 @@
 			margin: 0 auto; 
 			width: 200px;
 			height: 200px;
-			}
+		}
+
+		.horizontal-group .left{
+			float: left;
+			width: 45%;
+		}
+
+		.horizontal-group .left .form-fieldset{
+			width: 97%;
+			height: 34px;
+			margin-top: 10px;  
+			margin-bottom: 10px;
+			color: #333333;
+			text-align: left;
+			border-width: 1px;
+		}
+
+		.horizontal-group .left .form-input{
+			width: 100%;
+			height: 34px; 
+			margin-bottom: 10px;
+			color: #333333;
+			text-align: left;
+		}
+
+		.horizontal-group .right{
+			float: right;
+			width: 45%;
+		}
+
+		.horizontal-group .right .form-input{
+			width: 100%;
+			height: 34px; 
+			margin-bottom: 40.5px;
+			color: #333333;
+			text-align: left;
+		}
+
+		.horizontal-group .right .form-checkbox{
+			width: 3%;
+			height: 15px;
+			color: #333333;
+			text-align: left;
+		}
+
+
+		.horizontal-group button{
+			width: 100%;
+			color: white;
+			border-width: 1px;
+			margin-top: 10px; 
+			height: 25px;
+		}
 
 		.resetbtn{
-			background-color: #1bba93;
-			color: white;
+			background-color: red;
 		}
 
 		.confirmbtm{
-			background-color: red;
-			color: white;
+			background-color: #1bba93;
 		}
 
 		.right .right-left {
@@ -95,10 +107,10 @@
 	</style>
 </head>
 <body>
+	<header class="form-header">
+		<h1>Registration form</h1>
+	</header>
 	<form class="registration-form">	
-		<div class="form-header">
-			<h1>Registration form</h1>
-		</div>
 		<div class="form-body">
 			<div class="horizontal-group">
 				
@@ -109,19 +121,23 @@
 					<input type="text" id="firstname" class="form-input" placeholder="Name" required="required"/>
 					
 					<label for="lastname" class="label-title">Last name</label>
-					<input type="text" id="lastname" class="form-input"placeholder="Surname" required="required"/>
+					<input type="text" id="lastname" class="form-input" placeholder="Surname" required="required"/>
 
-					<div>
-						<span class="label-title">Select Gender:</span>
+					<fieldset class="form-fieldset">
+						<legend class="label-title">Select Gender</legend>
 						<label for="male"><input type="radio" name="gender" value="male" id="male">Male</label>
-						<label for="female"><input type="radio" name="gender" value="female" id="female">Male</label>
-					</div>
+						<label for="female"><input type="radio" name="gender" value="female" id="female">Female</label>
+					</fieldset>
 					<br>
 					<label for="year-old" class="label-title">Year`s old</label>
 					<input type="number" id="year-old"class="form-input", min="16" max="120" required="required"/>
 
 					<label for="date-of-birth" class="label-title">Date of birth</label>
 					<input type="date" id="date-of-birth"class="form-input" required="required"/>
+
+					<div class="form-input">
+					<button type="submit" class="confirmbtm"/>Submit</button>
+					</div>
 				</div>
 				
 				<div class="right">
@@ -143,31 +159,26 @@
 
 					<label for="password" class="label-title">Password</label><input type="password" id="password" class="form-input" placeholder="Password" required="required"/>
 
+					<div class="form-input">
 					<label for="agree" class="label-title">Agree with the rules:</label>
 					<input type="checkbox" id="agree" class="form-checkbox"/>
-
-					<div class="input-group">
-						<p><button type="reset" class="resetbtn"/>Reset</button>
-						<button type="submit" class="confirmbtm"/>Submit</button></p>
 					</div>
+
+					<div class="form-input">
+					<button type="reset" class="resetbtn"/>Reset</button>
+					</div>
+
+					<div class="right-left">
+						<h1>Contact us</h1>
+					</div>
+					<div class="right-right"> 
+						<a href="https://www.instagram.com/"><img src="https://cdn.icon-icons.com/icons2/1211/PNG/512/1491579602-yumminkysocialmedia36_83067.png"></a>
+        				<a href="https://www.youtube.com/"><img src="https://i.pinimg.com/originals/77/ed/ea/77edea2fbbb0f15de7cad9df138359d2.jpg"></a>
+       					<a href="https://twitter.com/?lang=uk"><img src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg"></a>
+     				</div>
 				</div>
 			</div>		
 		</div>
 	</form>
-	<footer>
-		<div class="horizontal-group">
-			<div class="left"></div>
-			<div class="right">
-				<div class="right-left">
-					<h1>Contact us</h1>
-				</div>
-				<div class="right-right"> 
-					<a href="https://www.instagram.com/"><img src="https://cdn.icon-icons.com/icons2/1211/PNG/512/1491579602-yumminkysocialmedia36_83067.png"></a>
-        			<a href="https://www.youtube.com/"><img src="https://i.pinimg.com/originals/77/ed/ea/77edea2fbbb0f15de7cad9df138359d2.jpg"></a>
-       				<a href="https://twitter.com/?lang=uk"><img src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg"></a>
-     			</div>
-			</div>
-		</div>	
-	</footer>
 </body>
 </html>
